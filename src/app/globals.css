@@ -1,0 +1,95 @@
+:root {
+  --fondo: #f6f7f9;
+  --texto: #202b3b;
+  --secundario: #566175;
+  --azul: #254eb5;
+  --borde: #dce1ea;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; color: var(--texto); background: var(--fondo); font-family: Arial, Helvetica, sans-serif; line-height: 1.5; }
+a { color: var(--azul); text-underline-offset: 4px; }
+button { font: inherit; cursor: pointer; }
+button, a { -webkit-tap-highlight-color: transparent; }
+a:focus-visible, button:focus-visible { outline: 3px solid #b35204; outline-offset: 4px; }
+h1, h2, h3, p { margin-top: 0; }
+h1, h2, h3 { line-height: 1.25; }
+.contenedor { width: min(1160px, calc(100% - 48px)); margin-inline: auto; }
+main { min-height: calc(100vh - 190px); padding-block: 36px 56px; }
+.cabecera { background: #fff; border-bottom: 1px solid var(--borde); }
+.barra { min-height: 82px; display: flex; align-items: center; gap: 44px; }
+.marca { color: var(--texto); font-size: 27px; font-weight: 800; text-decoration: none; letter-spacing: -1px; }
+.marca > span { color: var(--azul); }
+.marca .punto { color: #d87632; }
+nav a { font-size: 15px; font-weight: 600; text-decoration: none; }
+nav a:hover { text-decoration: underline; }
+.indicador-carrito { margin-left: auto; display: flex; align-items: center; gap: 9px; font-size: 14px; }
+.indicador-carrito strong { display: grid; place-items: center; min-width: 27px; height: 27px; padding-inline: 6px; border-radius: 50%; background: var(--azul); color: white; }
+.presentacion { background: #eaf0ff; border: 1px solid #dce5fa; border-radius: 12px; padding: 34px 38px; margin-bottom: 36px; }
+.etiqueta { color: var(--azul); font-size: 12px; font-weight: 700; letter-spacing: 1.8px; margin-bottom: 12px; }
+.presentacion h1 { font-size: clamp(28px, 4vw, 36px); letter-spacing: -.9px; margin-bottom: 12px; }
+.presentacion > p:last-child { color: #45546b; margin-bottom: 0; max-width: 620px; }
+.titulo-seccion { display: flex; justify-content: space-between; align-items: center; gap: 20px; margin-bottom: 24px; }
+.titulo-seccion h2 { font-size: 23px; margin-bottom: 6px; }
+.titulo-seccion p { color: var(--secundario); font-size: 14px; margin-bottom: 0; }
+.numero-productos { white-space: nowrap; font-size: 13px; color: var(--secundario); border: 1px solid var(--borde); padding: 6px 12px; border-radius: 20px; background: white; }
+.cuadricula { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 22px; }
+.tarjeta { background: #fff; border: 1px solid var(--borde); border-radius: 10px; overflow: hidden; display: flex; flex-direction: column; }
+.foto-tarjeta { display: grid; place-items: center; background: #f0f2f5; padding: 12px; border-bottom: 1px solid #e7eaf0; }
+.foto-tarjeta img { display: block; width: 100%; height: 185px; object-fit: contain; }
+.contenido-tarjeta { padding: 18px; display: flex; flex: 1; flex-direction: column; }
+.categoria { text-transform: capitalize; font-size: 12px; color: var(--azul); font-weight: 600; margin-bottom: 9px; }
+.tarjeta h3 { font-size: 16px; margin-bottom: 16px; min-height: 40px; overflow-wrap: anywhere; }
+.precio { font-weight: 700; font-size: 20px; margin-top: auto; margin-bottom: 4px; }
+.stock { font-size: 12px; color: #3b6752; margin-bottom: 16px; }
+.enlace-detalle { font-size: 14px; font-weight: 600; margin-bottom: 16px; width: fit-content; }
+.boton { display: inline-flex; align-items: center; justify-content: center; border: 1px solid transparent; border-radius: 6px; min-height: 44px; padding: 10px 14px; font-weight: 600; font-size: 14px; text-decoration: none; }
+.principal { background: var(--azul); color: #fff; }
+.principal:hover:not(:disabled) { background: #193e99; }
+.boton:disabled { background: #e4e8ef; color: #586276; cursor: not-allowed; }
+.accion-agregar .boton { width: 100%; }
+.cantidad-carrito { color: var(--secundario); text-align: center; font-size: 12px; margin: 8px 0 0; }
+.volver { display: inline-block; margin-bottom: 26px; font-size: 14px; font-weight: 600; }
+.detalle { display: grid; grid-template-columns: 1fr 1fr; background: white; border: 1px solid var(--borde); border-radius: 12px; overflow: hidden; }
+.foto-detalle { background: #eef1f6; display: grid; place-items: center; padding: 30px; }
+.foto-detalle img { width: 100%; height: auto; max-height: 520px; object-fit: contain; }
+.informacion-detalle { padding: 40px; }
+.informacion-detalle h1 { font-size: 30px; margin-bottom: 14px; overflow-wrap: anywhere; }
+.marca-producto { font-size: 14px; color: var(--secundario); }
+.precio-detalle { margin-top: 24px; font-size: 30px; }
+.descripcion { border-top: 1px solid var(--borde); padding-top: 22px; margin-top: 24px; margin-bottom: 28px; }
+.descripcion h2 { font-size: 16px; }
+.descripcion p { color: var(--secundario); font-size: 15px; margin-bottom: 0; }
+.nota { font-size: 12px; color: var(--secundario); margin: 20px 0 0; text-align: center; }
+.estado { background: white; border: 1px solid var(--borde); padding: 40px 24px; border-radius: 10px; text-align: center; }
+.estado h2 { font-size: 22px; }
+.error { border-color: #e4bdbd; }
+.error p { color: #8d3030; }
+.pie { border-top: 1px solid var(--borde); padding-block: 24px; display: flex; justify-content: space-between; gap: 16px; color: var(--secundario); font-size: 12px; }
+.solo-lector, .saltar-contenido:not(:focus) { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.saltar-contenido:focus { display: block; padding: 12px; background: white; }
+
+@media (max-width: 980px) {
+  .cuadricula { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .informacion-detalle { padding: 26px; }
+  .informacion-detalle h1 { font-size: 26px; }
+}
+@media (max-width: 620px) {
+  .contenedor { width: calc(100% - 32px); }
+  .barra { min-height: 72px; gap: 18px; flex-wrap: wrap; padding-block: 12px; }
+  .marca { font-size: 24px; }
+  nav a { font-size: 13px; }
+  .indicador-carrito { gap: 6px; font-size: 13px; }
+  .indicador-carrito svg { display: none; }
+  main { padding-top: 24px; }
+  .presentacion { padding: 26px 22px; }
+  .presentacion > p:last-child { font-size: 14px; }
+  .titulo-seccion { align-items: flex-start; gap: 12px; }
+  .titulo-seccion h2 { font-size: 21px; }
+  .cuadricula { grid-template-columns: 1fr; gap: 20px; }
+  .foto-tarjeta img { height: 220px; }
+  .tarjeta h3 { min-height: 0; }
+  .detalle { grid-template-columns: 1fr; }
+  .foto-detalle img { max-height: 300px; }
+  .pie { flex-direction: column; gap: 6px; }
+}
