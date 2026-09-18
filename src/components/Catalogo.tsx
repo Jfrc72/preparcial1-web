@@ -51,7 +51,7 @@ export default function Catalogo() {
         : <div className="cuadricula">
           {productos.map((producto) => (
             <TarjetaProducto key={producto.id} producto={producto}
-              cantidad={carrito.find((item) => item.producto.id === producto.id)?.cantidad ?? 0}
+              cantidad={carrito.find((item) => item.producto.id === producto.id)?.quantity ?? 0}
               onAgregar={agregarProducto} />
           ))}
         </div>}

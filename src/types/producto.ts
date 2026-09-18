@@ -22,5 +22,5 @@ export interface RespuestaProductos {
 
 export interface ItemCarrito {
   producto: Producto;
-  cantidad: number;
+  quantity: number;
 }

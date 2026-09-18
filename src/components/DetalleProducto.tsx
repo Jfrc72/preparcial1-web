@@ -40,7 +40,7 @@ export default function DetalleProducto({ id }: { id: string }) {
     setIntento((actual) => actual + 1);
   }
 
-  const cantidad = carrito.find((item) => item.producto.id === producto?.id)?.cantidad ?? 0;
+  const cantidad = carrito.find((item) => item.producto.id === producto?.id)?.quantity ?? 0;
 
   return (
     <>

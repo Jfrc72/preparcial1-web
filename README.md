@@ -48,3 +48,11 @@ El carrito conserva su contenido al navegar entre páginas, pero se reinicia al 
 ## API utilizada
 
 DummyJSON.
+
+## Decisiones de Arquitectura y Cambios del Parcial
+
+1. Evolucion del contexto: En el preparcial el carrito ya guardaba productos con `cantidad`. Cambie ese campo a `quantity` y agregue las opciones de disminuir, eliminar y vaciar. Use el estado anterior con `map`, `filter` y copias con `...` para no modificar los datos originales. El carrito se mantiene en memoria al navegar, pero se pierde al recargar.
+
+2. Calculo de totales: Use `reduce` para sumar precio por cantidad y contar las unidades. Hago la suma del dinero en centavos y al final divido entre 100 para evitar errores con decimales. Los totales se calculan en cada render y se comparten por el contexto, sin guardarlos en otro estado para no duplicar datos.
+
+3. Arquitectura del formulario: Use React con TypeScript y campos HTML nativos, sin librerias extra. Controle los campos con `useState`, `value` y `onChange`, y los terminos con `checked`. Los errores aparecen despues de `onBlur` y el boton se habilita cuando todo es valido. Use `preventDefault` para evitar la recarga, `setTimeout` para simular la espera y `useRef` para bloquear envios repetidos. Al terminar se vacia el carrito, se reinicia el formulario y se muestra la confirmacion.
